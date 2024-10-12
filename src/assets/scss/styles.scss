@@ -1,0 +1,225 @@
+@import './normalize';
+@import './global';
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+
+    @include media(1340) {
+        max-width: calc(100% - 40px);
+    }
+}
+
+body {
+    font-family: $font-inter;
+    font-weight: 400;
+    font-style: normal;
+    background: #F4F4F4;
+    color: #141414;
+}
+
+.select {
+    position: relative;
+
+    &_list {
+        position: absolute;
+        background: white;
+        width: 150px;
+        display: none;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 5px;
+        border-radius: 12px;
+        padding: 5px 0;
+
+        a, button {
+            width: 100%;
+            padding: 5px 14px;
+            font-size: 14px;
+            text-align: left;
+        }
+    }
+
+    &.active .select_list {
+        display: block !important;
+    }
+}
+
+// Header
+.header {
+    background: white;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 0;
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+    }
+
+    &__select {
+        &_btn {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 8px 14px;
+            font-size: 14px;
+        }
+
+        .select_list {
+            left: 0;
+            transform: translateX(0);
+        }
+    }
+
+    .alert {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        color: white;
+        background: #F54141;
+        border-radius: 4px;
+        padding: 5px 6px;
+        margin: 0 8px 0 16px;
+
+        h3 {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        h4 {
+            font-size: 10px;
+        }
+
+        p {
+            font-size: 12px;
+            font-weight: 600;
+        }
+    }
+
+    &__account {
+        &_btn {
+            border-radius: 12px;
+            padding: 9.5px 12px 9.5px 14px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: #F6F6F6;
+        }
+
+        .select_list {
+            right: 0;
+            left: auto;
+            transform: translateX(0);
+        }
+    }
+}
+// Header end
+
+// Breadcrumb
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 32px 0;
+
+    &__link {
+        padding: 16px 28px;
+        font-size: 16px;
+        border-radius: 8px;
+        color: #9751AC;
+        border: 1px solid #9751AC;
+
+        &.active {
+            color: white;
+            background: #9751AC;
+        }
+    }
+}
+// Breadcrumb end
+
+// Summary
+.summary {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+
+    &__title {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 32px;
+    }
+
+    &__list {
+        display: flex;
+        align-items: stretch;
+        gap: 7px;
+
+        &_item {
+            width: 100%;
+            min-height: 160px;
+            background: #F4F4F4;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 22px 16px;
+            transition: .2s ease all;
+            border: 1px solid transparent;
+
+            &.bg-lightblue {
+                background: #ECF4FD;
+
+                h5 {
+                    color: #B6B6B6;
+                }
+            }
+            
+            p {
+                font-size: 16px;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            h4 {
+                font-size: 24px;
+                font-weight: 600;
+            }
+
+            &__bottom {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+
+                h5 {
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+
+                a {
+                    font-size: 14px;
+                    color: #854896;
+                    text-decoration: underline;
+                    display: none;
+                }
+            }
+
+            &:hover {
+                border-color: #6CB6B0;
+
+                a {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+// Summary end
