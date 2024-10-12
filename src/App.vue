@@ -82,6 +82,82 @@ export default {
           </li>
         </ul>
       </div>
+      <div class="statistic">
+        <div class="statistic__left">
+          <div class="statistic__title">Статистика  за день</div>
+          <div class="statistic__radio">
+            <label for="day1">
+              <input type="radio" name="day" id="day1">
+              <span>Вчера</span>
+            </label>
+            <label for="day2">
+              <input type="radio" name="day" id="day2">
+              <span>Позавчера</span>
+            </label>
+          </div>
+          <ul class="statistic__card">
+            <li class="statistic__card_item">
+              <h4>Заказы</h4>
+              <h3>29 шт</h3>
+              <div>
+                <p><span class="text-red">- 23 945</span> от прошл. дня</p>
+                <p><span class="text-green">+ 44 353</span> от прошл. недели</p>
+              </div>
+            </li>
+            <li class="statistic__card_item">
+              <h4>Рекламные расходы</h4>
+              <h3>25 568 ₽</h3>
+              <div>
+                <p><span class="text-red">- 23 945</span> от прошл. дня</p>
+                <p><span class="text-green">+ 44 353</span> от прошл. недели</p>
+              </div>
+            </li>
+            <li class="statistic__card_item bg-yellow">
+              <h4>Прогнозная прибыль </h4>
+              <h3>25 568 ₽</h3>
+              <div>
+                <p><span class="text-red">- 23 945</span> от прошл. дня</p>
+                <p><span class="text-green">+ 44 353</span> от прошл. недели</p>
+              </div>
+            </li>
+          </ul>
+          <div class="statistic__form">
+            <div class="statistic__form_item">
+              <label for="">
+                <span>ФОТ за текущий месяц</span>
+                <img :src="this.$getImage('warning-gray.svg')" alt="">
+              </label>
+              <div class="form_inp">
+                <input type="text" placeholder="0 ₽ по умолчанию">
+                <img :src="this.$getImage('edit.svg')" alt="">
+              </div>
+            </div>
+            <div class="statistic__form_item">
+              <label for="">
+                <span>Расходы на продвижение за текущий день</span>
+                <img :src="this.$getImage('warning-gray.svg')" alt="">
+              </label>
+              <div class="form_inp">
+                <input type="text" placeholder="0 ₽ по умолчанию">
+                <img :src="this.$getImage('edit.svg')" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="statistic__right">
+          <img :src="this.$getImage('to-left.svg')" alt="">
+          <div class="statistic__right_card">
+            <h3>Прогнозная прибыль очень важный показатель как идут у вас продажи</h3>
+            <p>Например:</p>
+            <ul>
+              <li>Вошли в акцию — проверяйте, увеличилась ли прогнозная прибыль. Если нет, лучше выйти из акции</li>
+              <li>Подняли рекламную ставку — смотрите на прогнозную прибыль. Если она уменьшилась, стоит пересмотреть ставку</li>
+            </ul>
+            <h4>Ежедневный контроль прогнозной прибыли</h4>
+            <p>—  ключ к успеху вашего бизнеса</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>

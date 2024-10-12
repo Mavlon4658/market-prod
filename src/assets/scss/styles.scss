@@ -223,3 +223,190 @@ body {
     }
 }
 // Summary end
+
+// Statistic
+.statistic {
+    display: flex;
+    align-items: flex-start;
+    gap: 19px;
+    background: white;
+    border-radius: 16px;
+    margin: 24px 0 40px;
+    padding: 32px 20px 32px 24px;
+
+    &__title {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 32px;
+    }
+
+    &__radio {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        margin-bottom: 20px;
+
+        label {
+            padding: 2.5px 0 2.5px 2.5px;
+            display: flex;
+            align-items: center;
+            gap: 10.5px;
+            font-size: 16px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        input {
+            width: 19px;
+            height: 19px;
+        }
+    }
+
+    &__left {
+        width: 100%;
+    }
+
+    &__card {
+        display: flex;
+        align-items: stretch;
+        gap: 7px;
+        margin-bottom: 32px;
+
+        &_item {
+            width: 100%;
+            min-height: 160px;
+            background: #ECF4FD;
+            border-radius: 12px;
+            padding: 22px 16px 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid transparent;
+
+            &.bg-yellow {
+                border-color: #B49A48;
+                background: #FDF4DC;
+            }
+
+            h4 {
+                min-height: 38px;
+                font-size: 16px;
+                font-weight: 500;
+            }
+
+            h3 {
+                font-size: 24px;
+                font-weight: 600;
+            }
+
+            p {
+                font-size: 14px;
+                
+                .text-red {
+                    font-weight: 500;
+                    color: #F54141;
+                }
+
+                .text-green {
+                    font-weight: 500;
+                    color: #1EAC70;
+                }
+            }
+        }
+    }
+
+    &__form {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+
+        &_item {
+            label {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 16px;
+                margin-bottom: 17px;
+            }
+
+            .form_inp {
+                border: 1px solid #EDEDED;
+                width: 280px;
+                position: relative;
+                z-index: 1;
+                border-radius: 8px;
+                background: white;
+
+                input {
+                    width: 100%;
+                    height: 44px;
+                    padding: 0 32px 0 10px;
+                    font-size: 16px;
+
+                    &::placeholder {
+                        color: #B7B7B7;
+                    }
+                }
+
+                img {
+                    position: absolute;
+                    right: 10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    z-index: -1;
+                }
+            }
+        }
+    }
+
+    &__right {
+        width: 465px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        padding-top: 16px;
+
+        img {
+            flex-shrink: 0;
+        }
+
+        &_card {
+            padding: 33px 18px;
+            background: #FEF7E1;
+            border-radius: 12px;
+
+            h3 {
+                font-size: 16px;
+                font-weight: 600;
+                margin-bottom: 33px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            ul {
+                margin: 6px 0 25px;
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+                list-style-type: disc;
+                padding-left: 18px;
+                font-size: 16px;
+
+                li {
+                    &::marker {
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            h4 {
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+    }
+}
+// Statistic end
